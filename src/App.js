@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [backgroundColor, setBackgroundColor] = useState('');
+
+  const handleChangeColor = (e) => {
+    setBackgroundColor(e.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ backgroundColor }}>
+      <p>BackgroundColor</p>
+      <input type="text" value={backgroundColor} onChange={handleChangeColor} placeholder="색상을 입력하세요" />
     </div>
   );
-}
+};
+
 
 export default App;
