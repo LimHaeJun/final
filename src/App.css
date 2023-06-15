@@ -1,6 +1,9 @@
 div {
   height: 100vw; /* div 높이를 전체로 만들기 */
+  text-align: center;
+  margin : 0 auto;
 }
 
+#cell { vertical-align: middle; }
 
   
